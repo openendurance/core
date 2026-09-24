@@ -1,0 +1,17 @@
+{
+	"recommendations": [
+		"biomejs.biome",
+		"github.vscode-pull-request-github",
+		"ms-playwright.playwright",
+		"streetsidesoftware.code-spell-checker",
+		"ms-vscode-remote.remote-containers",
+		"editorconfig.editorconfig",
+		"github.codespaces",
+		"github.copilot-chat",
+		"vercel.turbo-vsc",
+		"redhat.vscode-yaml",
+		"anthropic.claude-code",
+		"hediet.vscode-drawio",
+		"psioniq.psi-header"
+	]
+}

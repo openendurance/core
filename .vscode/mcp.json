@@ -1,0 +1,17 @@
+{
+	"servers": {
+		"drawio": {
+			"type": "http",
+			"url": "https://mcp.draw.io/mcp"
+		},
+		"mermaid": {
+			"type": "http",
+			"url": "https://mcp.mermaid.ai/mcp"
+		},
+		"playwright": {
+			"type": "stdio",
+			"command": "npx",
+			"args": ["-y", "@playwright/mcp@latest"]
+		}
+	}
+}
