@@ -61,8 +61,8 @@ npm install @openendurance/<package-name>
 
 ## Relationship to Other OEI Repos
 
-- [`openendurance-infra`](https://github.com/openendurance/openendurance-infra) — Docker/Compose definitions for shared OEI infrastructure.
-- [`openendurance-infra-aws`](https://github.com/openendurance/openendurance-infra-aws) — AWS provisioning for the org-global shared platform services.
+- [`@openendurance/infra`](https://github.com/openendurance/infra) — Docker/Compose definitions for shared OEI infrastructure.
+- [`@openendurance/infra-aws`](https://github.com/openendurance/openendurance-infra-aws) — AWS provisioning for the org-global shared platform services.
 - [`grouprunfinder`](https://github.com/openendurance/grouprunfinder) — the first product built on this platform; depends on packages published from this repo.
 
 ## Development
@@ -91,7 +91,7 @@ Licensed under the [Apache License, Version 2.0](./LICENSE).
 SPDX-License-Identifier: Apache-2.0
 ```
 
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B33512%2Fgithub.com%2Fopenendurance%2Ffkt.svg?type=small)](https://app.fossa.com/projects/custom%2B33512%2Fgithub.com%2Fopenendurance%2Ffkt?ref=badge_small)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopenendurance%2Fcore.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopenendurance%2Fcore?ref=badge_shield&issueType=license)
 
 ---
 
