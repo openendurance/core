@@ -102,5 +102,3 @@ SPDX-License-Identifier: Apache-2.0
 <div align="center">
 	Copyright © 2026 <a href="https://algorythmic.com">Algorythmic, LLC</a>
 </div>
-
-Copyright © 2026 Algorythmic
