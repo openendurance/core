@@ -1,0 +1,73 @@
+{
+	"$schema": "./node_modules/turbo/schema.json",
+	"ui": "tui",
+	"envMode": "loose",
+	"globalDependencies": [
+		"tsconfig.json",
+		"package.json",
+		"pnpm-lock.yaml",
+		".npmrc",
+		".nvmrc"
+	],
+	"globalEnv": ["NODE_ENV"],
+	"globalPassThroughEnv": [
+		"CI",
+		"ENABLE_EXPERIMENTAL_COREPACK",
+		"HUSKY",
+		"TURBO_TOKEN",
+		"TURBO_TEAM"
+	],
+	"boundaries": {
+		"tags": {
+			"backend": {
+				"dependencies": {
+					"deny": ["frontend", "tests"]
+				}
+			},
+			"frontend": {
+				"dependencies": {
+					"deny": ["tests"]
+				}
+			},
+			"shared": {
+				"dependencies": {
+					"deny": ["backend", "frontend", "tests"]
+				}
+			},
+			"tests": {
+				"dependencies": {
+					"deny": ["backend", "frontend"]
+				}
+			}
+		}
+	},
+	"tasks": {
+		"build": {
+			"dependsOn": ["^build"]
+		},
+		"build:ci": {
+			"dependsOn": ["^build:ci"]
+		},
+		"dev": {
+			"persistent": true,
+			"cache": false
+		},
+		"lint": {
+			"dependsOn": ["^lint"],
+			"cache": true
+		},
+		"lint:es": {
+			"dependsOn": ["^lint:es"],
+			"cache": true
+		},
+		"test": {
+			"dependsOn": ["^build", "^test"],
+			"outputs": [".coverage/**"],
+			"cache": true
+		},
+		"typecheck": {
+			"dependsOn": ["^typecheck"],
+			"outputs": ["tsconfig.tsbuildinfo"]
+		}
+	}
+}

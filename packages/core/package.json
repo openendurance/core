@@ -1,0 +1,37 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"name": "@openendurance/core",
+	"version": "0.0.1",
+	"description": "Open Endurance Initiative (OEI) core components.",
+	"repository": "https://github.com/openendurance/core",
+	"author": "The OEI Team <team@openendurance.com>",
+	"private": true,
+	"license": "UNLICENSED",
+	"sideEffects": false,
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		}
+	},
+	"scripts": {
+		"build": "tsc --build tsconfig.build.json && tsc-alias",
+		"build:ci": "pnpm build",
+		"clean": "rm -rf .turbo coverage dist node_modules *.tsbuildinfo",
+		"lint": "pnpm exec biome lint",
+		"test": "NODE_NO_WARNINGS=1 jest",
+		"typecheck": "tsc --noEmit",
+		"watch": "tsc -w"
+	},
+	"dependencies": {
+		"tslib": "^2.8.1"
+	},
+	"devDependencies": {
+		"tsc-alias": "^1.9.5"
+	}
+}

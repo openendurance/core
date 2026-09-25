@@ -1,0 +1,100 @@
+{
+	"cSpell.ignorePaths": [
+		"package-lock.json",
+		"pnpm-lock.yaml",
+		"pnpm-workspace.yaml",
+		"node_modules",
+		"vscode-extension",
+		".git/objects",
+		".github/agents/**/*.md",
+		".github/instructions/**/*.md",
+		".github/prompts/**/*.md",
+		".github/skills/**/*.md",
+		".vscode",
+		".vscode-insiders",
+		"**/test/**/*",
+		"**/.old/*",
+		"**/.wip/*",
+		"**/AGENTS.md",
+		"**/turbo.json",
+		"CODEOWNERS"
+	],
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.biome": "explicit",
+		"source.organizeImports.biome": "explicit"
+	},
+	"editor.formatOnSave": true,
+	"files.exclude": {
+		"**/.git": true,
+		"**/node_modules": true,
+		"**/.DS_Store": true,
+		".{dev,shadowenv.d}": true
+	},
+	"css.validate": false,
+	"less.validate": false,
+	"scss.validate": false,
+	"js/ts.tsdk.path": "./node_modules/typescript/lib",
+	"js/ts.tsdk.promptToUseWorkspaceVersion": true,
+	"cSpell.words": [
+		"agentic",
+		"Algorythmic",
+		"Cargile",
+		"openendurance",
+		"protip",
+		"redocly",
+		"untriaged",
+		"ulidx",
+		"upvote"
+	],
+	"psi-header.config": {
+		"forceToTop": true,
+		"license": "Custom",
+		"blankLinesAfter": 1
+	},
+	"psi-header.license-text": [
+		"SPDX-FileCopyrightText: <<year>> Algorythmic",
+		"SPDX-License-Identifier: Apache-2.0"
+	],
+	"psi-header.templates": [
+		{
+			"language": "*",
+			"template": ["<<licensetext>>"]
+		}
+	],
+	"psi-header.lang-config": [
+		{
+			"language": "typescript",
+			"begin": "",
+			"prefix": "// ",
+			"end": ""
+		},
+		{
+			"language": "typescriptreact",
+			"begin": "",
+			"prefix": "// ",
+			"end": ""
+		},
+		{
+			"language": "javascript",
+			"begin": "",
+			"prefix": "// ",
+			"end": ""
+		},
+		{
+			"language": "javascriptreact",
+			"begin": "",
+			"prefix": "// ",
+			"end": ""
+		}
+	],
+	"json.schemaDownload.trustedDomains": {
+		"https://raw.githubusercontent.com/microsoft/vscode/": true,
+		"https://raw.githubusercontent.com/devcontainers/spec/": true,
+		"https://www.schemastore.org/": true,
+		"https://json.schemastore.org/": true,
+		"https://json-schema.org/": true,
+		"https://developer.microsoft.com/json-schemas/": true,
+		"https://docs.renovatebot.com/renovate-schema.json": true
+	}
+}

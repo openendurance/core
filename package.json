@@ -1,0 +1,53 @@
+{
+	"$schema": "https://json.schemastore.org/package",
+	"name": "@openendurance",
+	"version": "0.0.0",
+	"private": true,
+	"license": "UNLICENSED",
+	"author": "Kristopher Cargile <k@algorythmic.com>",
+	"description": "Open Endurance Initiative core components.",
+	"packageManager": "pnpm@11.22.0",
+	"engines": {
+		"node": ">=24"
+	},
+	"scripts": {
+		"build": "pnpm turbo run build",
+		"build:ci": "pnpm turbo run build:ci",
+		"changeset": "changeset",
+		"changeset:v": "pnpm run version",
+		"coverage:merge": "istanbul-merge --out coverage/merged/coverage-final.json $(find . -path '*/.coverage/coverage-final.json' -not -path '*/node_modules/*' | tr '\\n' ' ')",
+		"coverage:report": "nyc report --reporter=html --reporter=text-summary --reporter=json-summary --temp-dir=coverage/merged --report-dir=coverage/report",
+		"dev": "pnpm turbo run dev",
+		"format": "pnpm exec biome format --write",
+		"lint": "pnpm lint:root && pnpm turbo run lint",
+		"lint:root": "pnpm exec biome lint --files-ignore-unknown $(find . -maxdepth 1 -type f -print)",
+		"pre-commit": "lint-staged",
+		"preinstall": "npx only-allow pnpm",
+		"prepare": "husky",
+		"test": "pnpm turbo run test",
+		"typecheck": "pnpm turbo run typecheck",
+		"watch": "tsc -w",
+		"version": "changeset version"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.14",
+		"@changesets/changelog-github": "^0.7.0",
+		"@changesets/cli": "^2.31.0",
+		"@playwright/test": "^1.61.1",
+		"@types/jest": "^30.0.0",
+		"@types/node": "^25.9.1",
+		"globals": "^17.0.0",
+		"husky": "^9.1.7",
+		"istanbul-merge": "^2.0.0",
+		"jest": "^30.4.2",
+		"lint-staged": "^17.0.5",
+		"nyc": "^18.0.0",
+		"ts-jest": "^29.4.11",
+		"ts-node": "^10.9.2",
+		"turbo": "^2.10.5",
+		"typescript": "^6.0.3"
+	},
+	"dependencies": {
+		"ulidx": "^2.4.1"
+	}
+}
