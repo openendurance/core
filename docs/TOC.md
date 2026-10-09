@@ -2,6 +2,10 @@
 
 Canonical entry point for OEI Core documentation. Update this file whenever a document is added, removed, or renamed. All paths are relative to the `/docs` directory.
 
+## Overview
+
+- [Documentation overview and conventions](./README.md)
+
 ## Architecture Decision Records
 
 - [ADR guide](./adr/README.md)
