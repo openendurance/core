@@ -36,7 +36,7 @@ Start with `TOC.md` for a navigable index of all documents.
 
 ## Conventions
 
-- All paths in documents are repo-relative
+- Paths within the documentation tree are relative to `/docs`; paths outside it are repo-relative
 - Update `TOC.md` whenever a document is added, removed, or renamed
 - Add a `TOC.md` entry for every new registry or ADR; leave section headers present even when empty
 - Each subdirectory has its own README with authorship and update guidance, including `wiki/`
