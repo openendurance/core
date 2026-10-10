@@ -35,5 +35,5 @@ Do not reuse or renumber existing values.
 
 ## Update Contract
 
-Add and maintain wiki content here as it is authored. Follow the naming above, and update `/docs/TOC.md` when new wiki pages are introduced.
+Add and maintain wiki content here as it is authored. Follow the naming above, and update `TOC.md` when new wiki pages are introduced.
 
