@@ -21,7 +21,7 @@ ADRs may be authored by engineers, architects, or agents. Regardless of origin, 
 Each ADR follows this template:
 
 ```markdown
-# ADR NNNN: {Title}
+# ADR-NNNN: {Title}
 
 ## Status
 
