@@ -25,4 +25,4 @@ Human and agent maintained. Agents executing multi-step or long-running pipeline
 
 Update in place as findings are logged or resolved. A registry entry is never deleted — if a finding is resolved, mark it resolved with a date and reference the ADR or commit that closed it. The full history of findings is part of the record.
 
-New registries may be added as new tracked concerns emerge. Add each to `/docs/TOC.md` when created.
+New registries may be added as new tracked concerns emerge. Add each to `TOC.md` when created.
