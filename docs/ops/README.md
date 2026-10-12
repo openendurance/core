@@ -12,10 +12,9 @@ Decisions about operational approach belong in `adr/`.
 
 ## Contents
 
-| Document | Purpose |
-| -------- | ------- |
-
-No operational documents are currently tracked here.
+| Document                                                               | Purpose                                                                                                 |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| [Commit signing (DCO + cryptographic signatures)](./commit-signing.md) | Explains OEI's two independent commit checks, setup for signing, and remediation/troubleshooting steps. |
 
 ## Authorship
 
