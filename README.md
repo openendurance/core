@@ -8,7 +8,6 @@ Shared foundational libraries for the [Open Endurance Initiative](https://github
 [![Release](https://github.com/openendurance/fkt/actions/workflows/release.yml/badge.svg)](https://github.com/openendurance/fkt/actions/workflows/release.yml)&nbsp;
 [![Build & Test](https://github.com/openendurance/fkt/actions/workflows/build.yml/badge.svg)](https://github.com/openendurance/fkt/actions/workflows/build.yml)&nbsp;
 [![CodeQL](https://github.com/openendurance/fkt/actions/workflows/codeql.yml/badge.svg)](https://github.com/openendurance/fkt/actions/workflows/codeql-analysis.yml)&nbsp;
-[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B33512%2Fgithub.com%2Fopenendurance%2Ffkt.svg?type=small)](https://app.fossa.com/projects/custom%2B33512%2Fgithub.com%2Fopenendurance%2Ffkt?ref=badge_small)
 
 ## Status
 
@@ -90,8 +89,6 @@ Licensed under the [Apache License, Version 2.0](./LICENSE).
 ```
 SPDX-License-Identifier: Apache-2.0
 ```
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fopenendurance%2Fcore.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Fopenendurance%2Fcore?ref=badge_shield&issueType=license)
 
 ---
 
