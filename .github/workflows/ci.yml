@@ -1,0 +1,94 @@
+name: CI
+
+on:
+    pull_request:
+        branches: [main, develop, release/*, hotfix/*]
+        paths-ignore:
+            - "**/README.md"
+            - ".vscode/**"
+            - ".devcontainer/**"
+            - ".claude/**"
+            - ".husky/**"
+            - "scripts/*"
+    push:
+        branches: [main, develop, release/*, hotfix/*]
+        paths-ignore:
+            - "**/README.md"
+            - ".vscode/**"
+            - ".devcontainer/**"
+            - ".claude/**"
+            - ".husky/**"
+            - "docs/**"
+            - "scripts/*"
+
+permissions:
+    contents: read
+
+concurrency:
+    group: ci-${{ github.workflow }}-${{ github.head_ref || github.ref }}
+    cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+    ci:
+        runs-on: ubuntu-latest
+        if: ${{ github.actor != 'dependabot[bot]' }}
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+              with:
+                  fetch-depth: 0
+
+            - name: Setup pnpm
+              uses: pnpm/action-setup@v4
+              with:
+                  run_install: false
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 24
+                  cache: pnpm
+
+            - name: Determine whether CI tasks are affected
+              id: turbo_ignore
+              shell: bash
+              run: |
+                  set +e
+                  pnpm dlx turbo-ignore --task=lint --fallback=HEAD~1
+                  exit_code=$?
+                  set -e
+
+                  if [ "$exit_code" -eq 0 ]; then
+                    echo "run_ci=false" >> "$GITHUB_OUTPUT"
+                    echo "No affected packages detected for lint task."
+                  elif [ "$exit_code" -eq 1 ]; then
+                    echo "run_ci=true" >> "$GITHUB_OUTPUT"
+                    echo "Affected packages detected. Running CI checks."
+                  else
+                    echo "turbo-ignore failed unexpectedly (exit ${exit_code})."
+                    exit "$exit_code"
+                  fi
+
+            - name: Install deps
+              if: steps.turbo_ignore.outputs.run_ci == 'true'
+              run: pnpm install --frozen-lockfile
+
+            - name: Lint
+              if: steps.turbo_ignore.outputs.run_ci == 'true'
+              run: pnpm lint
+
+            - name: Build
+              if: steps.turbo_ignore.outputs.run_ci == 'true'
+              run: pnpm build
+
+            - name: Typecheck
+              if: steps.turbo_ignore.outputs.run_ci == 'true'
+              run: pnpm typecheck
+
+            - name: Test
+              if: steps.turbo_ignore.outputs.run_ci == 'true'
+              run: pnpm test
+
+            - name: Skipped summary
+              if: steps.turbo_ignore.outputs.run_ci == 'false'
+              run: echo "CI checks skipped because no relevant package changes were detected."
