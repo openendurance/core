@@ -21,6 +21,7 @@ Canonical entry point for OEI Core documentation. Update this file whenever a do
 ## Operations
 
 - [Operations guide](./ops/README.md)
+- [Commit signing (DCO + cryptographic signatures)](./ops/commit-signing.md)
 
 ## Registry
 
