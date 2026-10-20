@@ -45,7 +45,7 @@ ssh-keygen -t ed25519 -C "your-email@example.com" -f ~/.ssh/git_signing_key
 
 ```sh
 git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/git_signing_key.pub
+git config --global user.signingkey ~/.ssh/git_signing_key
 git config --global commit.gpgsign true
 ```
 
