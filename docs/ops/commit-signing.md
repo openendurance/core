@@ -45,7 +45,7 @@ ssh-keygen -t ed25519 -C "your-email@example.com" -f ~/.ssh/git_signing_key
 
 ```sh
 git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/git_signing_key.pub
+git config --global user.signingkey ~/.ssh/git_signing_key
 git config --global commit.gpgsign true
 ```
 
@@ -83,7 +83,7 @@ a whole branch.
 commits that already have correct sign-off; this only touches signatures):
 
 ```sh
-git rebase --root --exec "git commit --amend --no-edit -S"
+git rebase --force-rebase --gpg-sign origin/develop
 git push --force-with-lease origin <branch>
 ```
 
@@ -102,7 +102,7 @@ signed it.**
 Check the raw commit object before trusting that message:
 
 ```sh
-git cat-file commit HEAD | head -5
+git cat-file commit HEAD | sed -n '1,/^$/p'
 ```
 
 If you see a `gpgsig` line, the commit is signed. The "No signature" output
