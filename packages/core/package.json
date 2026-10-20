@@ -24,7 +24,7 @@
 		"build:ci": "pnpm build",
 		"clean": "rm -rf .turbo coverage dist node_modules *.tsbuildinfo",
 		"lint": "pnpm exec biome lint",
-		"test": "NODE_NO_WARNINGS=1 jest",
+		"test": "NODE_NO_WARNINGS=1 jest --passWithNoTests",
 		"typecheck": "tsc --noEmit",
 		"watch": "tsc -w"
 	},
