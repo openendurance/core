@@ -12,10 +12,11 @@ Generated output belongs in `generated/`.
 
 ## Contents
 
-| Document | Purpose |
-| -------- | ------- |
+| Document                                                                | Purpose                                                                                             |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [Core publish readiness registry](./core-publish-readiness-registry.md) | Tracks in-progress work to bring `core` to publish-ready parity with `config-dev` and `config-ort`. |
 
-No registries are currently tracked here.
+Additional registries may be added as new tracked concerns emerge.
 
 ## Authorship
 
