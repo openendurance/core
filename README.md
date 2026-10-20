@@ -17,29 +17,27 @@ Early / pre-release. APIs will change without notice until version `1.0` is ship
 
 OEI Core is a monorepo of independently publishable npm packages. It contains the shared substrate that OEI products build on, not product-specific logic.
 
-<!-- TODO: fill in as packages are extracted from the GRF codebase -->
-
-| Package | Description |
-|---|---|
-| [`@openendurance/core`](packages/core) |  Domain models and other common utilities. |
-| [`@openendurance/core-validation`](packages/core-validation) | Validation logic. |
+| Package                                                      | Description                               |
+| ------------------------------------------------------------ | ----------------------------------------- |
+| [`@openendurance/core`](packages/core)                       | Domain models and other common utilities. |
+| [`@openendurance/core-validation`](packages/core-validation) | Validation logic.                         |
 
 ## Repository Layout
 
-| Path | Purpose |
-|---|---|
-| [`packages/`](packages) | Independently publishable npm packages — the actual platform-layer code. |
-| [`apps/`](apps) | Deployable applications built on the packages in this repo. |
-| [`docs/`](docs) | Project knowledge base. |
-| [`docs/adr/`](docs/adr) | Architecture decision records. |
-| [`docs/arch/`](docs/arch) | Architecture and system-design documentation. |
-| [`docs/ops/`](docs/ops) | Operational standards and procedures. |
-| [`docs/registry/`](docs/registry) | Reference registries (schemas, service catalogs, etc.). |
-| [`docs/generated/`](docs/generated) | Generated documentation artifacts — do not hand-edit. |
-| [`fixtures/`](fixtures) | Shared test fixtures used across packages. |
-| [`scripts/`](scripts) | Repo-level tooling and automation scripts. |
-| [`.devcontainer/`](.devcontainer) | Devcontainer definition for a consistent local/cloud dev environment. |
-| [`.github/`](.github) | CI/CD workflows and repository automation. |
+| Path                                | Purpose                                                                  |
+| ----------------------------------- | ------------------------------------------------------------------------ |
+| [`packages/`](packages)             | Independently publishable npm packages — the actual platform-layer code. |
+| [`apps/`](apps)                     | Deployable applications built on the packages in this repo.              |
+| [`docs/`](docs)                     | Project knowledge base.                                                  |
+| [`docs/adr/`](docs/adr)             | Architecture decision records.                                           |
+| [`docs/arch/`](docs/arch)           | Architecture and system-design documentation.                            |
+| [`docs/ops/`](docs/ops)             | Operational standards and procedures.                                    |
+| [`docs/registry/`](docs/registry)   | Reference registries (schemas, service catalogs, etc.).                  |
+| [`docs/generated/`](docs/generated) | Generated documentation artifacts — do not hand-edit.                    |
+| [`fixtures/`](fixtures)             | Shared test fixtures used across packages.                               |
+| [`scripts/`](scripts)               | Repo-level tooling and automation scripts.                               |
+| [`.devcontainer/`](.devcontainer)   | Devcontainer definition for a consistent local/cloud dev environment.    |
+| [`.github/`](.github)               | CI/CD workflows and repository automation.                               |
 
 ## Why this Exists
 
@@ -93,7 +91,7 @@ SPDX-License-Identifier: Apache-2.0
 ---
 
 <div align="center">
-	Made with ⛰️💙 in Colorado USA
+	Made with 💙 in Colorado, USA
 </div>
 <br />
 <div align="center">
