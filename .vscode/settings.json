@@ -40,11 +40,12 @@
 		"agentic",
 		"Algorythmic",
 		"Cargile",
+		"grouprunfinder",
 		"openendurance",
 		"protip",
 		"redocly",
-		"untriaged",
 		"ulidx",
+		"untriaged",
 		"upvote"
 	],
 	"psi-header.config": {
@@ -95,6 +96,7 @@
 		"https://json.schemastore.org/": true,
 		"https://json-schema.org/": true,
 		"https://developer.microsoft.com/json-schemas/": true,
-		"https://docs.renovatebot.com/renovate-schema.json": true
+		"https://docs.renovatebot.com/renovate-schema.json": true,
+		"https://unpkg.com/@changesets": true
 	}
 }
