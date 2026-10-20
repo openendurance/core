@@ -26,6 +26,7 @@ Canonical entry point for OEI Core documentation. Update this file whenever a do
 ## Registry
 
 - [Registry guide](./registry/README.md)
+- [Core publish readiness registry](./registry/core-publish-readiness-registry.md)
 
 ## Wiki
 
