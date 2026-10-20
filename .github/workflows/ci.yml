@@ -54,7 +54,7 @@ jobs:
               shell: bash
               run: |
                   set +e
-                  pnpm dlx turbo-ignore --task=lint --fallback=HEAD~1
+                  pnpm dlx turbo-ignore --task=lint --fallback="${{ github.event_name == 'push' && github.event.before || github.event.pull_request.base.sha }}"
                   exit_code=$?
                   set -e
 
