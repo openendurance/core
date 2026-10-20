@@ -102,7 +102,7 @@ signed it.**
 Check the raw commit object before trusting that message:
 
 ```sh
-git cat-file commit HEAD | head -5
+git cat-file commit HEAD | sed -n '1,/^$/p'
 ```
 
 If you see a `gpgsig` line, the commit is signed. The "No signature" output
