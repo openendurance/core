@@ -3,9 +3,9 @@
 	"name": "@openendurance",
 	"version": "0.0.0",
 	"private": true,
-	"license": "UNLICENSED",
+	"license": "Apache-2.0",
 	"author": "Kristopher Cargile <k@algorythmic.com>",
-	"description": "Open Endurance Initiative core components.",
+	"description": "Open Endurance Initiative (OEI) core components.",
 	"packageManager": "pnpm@11.22.0",
 	"engines": {
 		"node": ">=24"
@@ -51,7 +51,5 @@
 		"turbo": "^2.10.5",
 		"typescript": "^6.0.3"
 	},
-	"dependencies": {
-		"ulidx": "^2.4.1"
-	}
+	"dependencies": {}
 }

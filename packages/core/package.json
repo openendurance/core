@@ -2,34 +2,64 @@
 	"$schema": "https://json.schemastore.org/package",
 	"name": "@openendurance/core",
 	"version": "0.0.1",
-	"description": "Open Endurance Initiative (OEI) core components.",
-	"repository": "https://github.com/openendurance/core",
+	"license": "Apache-2.0",
 	"author": "The OEI Team <team@openendurance.com>",
-	"private": true,
-	"license": "UNLICENSED",
-	"sideEffects": false,
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
-	"files": [
-		"dist"
+	"description": "A TypeScript toolkit for building endurance sports applications.",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/openendurance/core.git"
+	},
+	"keywords": [
+		"cycling",
+		"endurance-sports",
+		"fitness",
+		"group-ride",
+		"group-run",
+		"group-runners",
+		"grouprunfinder",
+		"healthtech",
+		"hiking",
+		"mountain-biking",
+		"oei",
+		"open-endurance-initiative",
+		"open-source",
+		"openenduranceinitiative",
+		"running",
+		"thru-hiking",
+		"ultrarunning"
 	],
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
 			"default": "./dist/index.js"
 		}
 	},
+	"files": [
+		"dist",
+		"README.md"
+	],
+	"main": "./dist/index.js",
+	"publishConfig": {
+		"access": "public",
+		"provenance": true
+	},
+	"sideEffects": false,
+	"type": "module",
+	"types": "./dist/index.d.ts",
 	"scripts": {
 		"build": "tsc --build tsconfig.build.json && tsc-alias",
 		"build:ci": "pnpm build",
 		"clean": "rm -rf .turbo coverage dist node_modules *.tsbuildinfo",
 		"lint": "pnpm exec biome lint",
+		"prepack": "pnpm run build",
 		"test": "NODE_NO_WARNINGS=1 jest --passWithNoTests",
 		"typecheck": "tsc --noEmit",
 		"watch": "tsc -w"
 	},
 	"dependencies": {
-		"tslib": "^2.8.1"
+		"tslib": "^2.8.1",
+		"ulidx": "^2.4.1"
 	},
 	"devDependencies": {
 		"tsc-alias": "^1.9.5"
