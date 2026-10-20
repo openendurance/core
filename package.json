@@ -23,7 +23,7 @@
 		"format:prettier": "pnpm exec prettier --write \"**/*.{md,yml,yaml}\"",
 		"lint": "pnpm run lint:root && pnpm run lint:prettier && pnpm turbo run lint",
 		"lint:prettier": "pnpm exec prettier --check \"**/*.{md,yml,yaml}\"",
-		"lint:root": "pnpm exec biome lint --files-ignore-unknown $(find . -maxdepth 1 -type f -print)",
+		"lint:root": "pnpm exec prettier --check package.json biome.json tsconfig.json turbo.json renovate.json lint-staged.config.mjs",
 		"pre-commit": "lint-staged",
 		"preinstall": "npx only-allow pnpm",
 		"prepare": "husky",
