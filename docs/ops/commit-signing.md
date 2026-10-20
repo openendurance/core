@@ -83,7 +83,7 @@ a whole branch.
 commits that already have correct sign-off; this only touches signatures):
 
 ```sh
-git rebase --root --exec "git commit --amend --no-edit -S"
+git rebase --force-rebase --gpg-sign origin/develop
 git push --force-with-lease origin <branch>
 ```
 
